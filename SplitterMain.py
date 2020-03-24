@@ -1,5 +1,6 @@
-import os
-import traceback
+from os import getcwd, listdir, chdir, system
+from os.path import isfile, isdir, getsize
+from traceback import print_exc
 from fileSplitCore import fileSplitter, fileJoiner
 
 def main():
@@ -15,10 +16,10 @@ def main():
 
 def splitter():
     print("\nLooking for files in local directory...\n")
-    os.chdir("TestFiles")
-    path = os.getcwd()
+    chdir("TestFiles")
+    path = getcwd()
     print("Currently in : \n{}\n".format(path))
-    filelist = [x for x in os.listdir() if os.path.isfile(x)]
+    filelist = [x for x in listdir() if isfile(x)]
     n = len(filelist)
     print("List of Files :")
     for i in range(n):
@@ -28,7 +29,7 @@ def splitter():
     filename = filelist[x-1]
     print("\nEnter the number of chunks : ")
     n = int(input())
-    file_size = os.path.getsize(filename)
+    file_size = getsize(filename)
     Int = file_size//n
     Dec = (file_size/n) - (Int)
     if (Dec == 0):
@@ -40,9 +41,9 @@ def splitter():
 
 
 def joiner():
-    os.chdir("TestFiles")
+    chdir("TestFiles")
     print("\nLooking for available folders in local directory...\n")
-    folderlist = [x for x in os.listdir() if (os.path.isdir(x))]
+    folderlist = [x for x in listdir() if (isdir(x))]
     n = len(folderlist)
     print("List of Folders Available :")
     for i in range(n):
@@ -54,4 +55,5 @@ def joiner():
 
 
 if __name__ == '__main__':
+    system('cls')
     main()
