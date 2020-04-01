@@ -53,5 +53,5 @@ def fileSplitter(filename,size):
         print("\nFile Splitted to",foldername)
     except Exception:
         print("\nFailed!")
-        traceback.print_exc()
+        print_exc()
 
