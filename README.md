@@ -6,3 +6,5 @@ To do:
 ---
 1. Create a log file.
 2. Option to copy, move the file. (maybe?)
+
+**Authered by Jainam Desai**
