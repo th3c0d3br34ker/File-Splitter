@@ -7,7 +7,6 @@ def fileJoiner(folder):
         chdir(folder)
         print("Current directory : ", getcwd())
         print("{} is selected.".format(folder))
-        path = getcwd()
         files = [x for x in listdir()]
         print("\nFile to be joned : ")
         for i in files: print(i)
@@ -16,7 +15,7 @@ def fileJoiner(folder):
         with open(filename,'wb') as main_file:
             for f in files:
                 with open(f,'rb') as part_file:
-                    file_obj = part_file.read()        
+                    file_obj = part_file.read()
                 main_file.write(file_obj)
                 remove(f)
         chdir("..")
@@ -36,7 +35,6 @@ def fileSplitter(filename,size):
             mkdir(foldername)
             chdir(foldername)
             while(len(f) > 0):
-                
                 if(count < 10):
                     fpart = '0'+str(count)
                 else:

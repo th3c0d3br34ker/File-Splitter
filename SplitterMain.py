@@ -1,6 +1,5 @@
 from os import getcwd, listdir, chdir, system
 from os.path import isfile, isdir, getsize
-from traceback import print_exc
 from fileSplitCore import fileSplitter, fileJoiner
 
 def main():
