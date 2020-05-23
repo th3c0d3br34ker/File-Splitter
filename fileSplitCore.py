@@ -39,7 +39,6 @@ def fileSplitter(filename,size):
                     fpart = '0'+str(count)
                 else:
                     fpart = str(count)
-                
                 with open(foldername+"_"+fpart,'wb') as part:
                     part.write(f)
                     part.close()
