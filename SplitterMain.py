@@ -2,6 +2,7 @@ from os import getcwd, listdir, chdir, system
 from os.path import isfile, isdir, getsize
 from fileSplitCore import fileSplitter, fileJoiner
 
+
 def main():
     print("*************** Welcome **************")
     print("Enter 1 to Split 2 to Join")
@@ -35,8 +36,8 @@ def splitter():
         chunk = Int
     else:
         chunk = Int + 1
-    main_file=path+"\\"+filename
-    fileSplitter(main_file,chunk)
+    main_file = path+"\\"+filename
+    fileSplitter(main_file, chunk)
 
 
 def joiner():
