@@ -9,4 +9,4 @@ File Splitter and Joiner in python.
 1.  Create a log file.
 2.  Option to copy, move the file. (maybe?)
 
-**Authored by Jainam Desai**
+> Made with 🖤 by Jainam Desai
